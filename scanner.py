@@ -19,8 +19,7 @@ def scan_ports(target, start_port, end_port):
         thread = threading.Thread(target=check_port, args=(port,))
         threads.append(thread)
         thread.start()
-
-    # Wait for all threads to finish
+        
     for thread in threads:
         thread.join()
 
